@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Title</title>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script
+        src="//localhost:7777/xeact/node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    <script src="//localhost:7777/xeact/node_modules/@webcomponents/webcomponentsjs/webcomponents-sd-ce.js"></script>
+
+
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+
+
+    <script src="//localhost:7777/xeact/dist/xeact.js"></script>
+
+    <script src="//localhost:7777/xeact-components/dist/xeact-components.js"></script>
+
+    <style>
+        .content {
+            padding: 8px;
+        }
+
+        .text {
+            background: #999;
+            color: #fff;
+            text-align: center;
+            padding: .5em 0;
+        }
+
+        x-card img{
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+
+    <x-row spacing="16">
+        <x-col xs="12" sm="6" lg="4">
+            <x-card>
+                <x-card-header title="Header" subheader="subheader">Header</x-card-header>
+                <div>
+                    <img title="asdf"
+                         src="https://img30.360buyimg.com/mkts/jfs/t3298/204/1601832036/8729/f119c651/57d0033dN3f2a8ec7.jpg"/>
+                </div>
+                <x-card-content>
+                    <p>我是一个非常简单的卡片。 我善于包含小部分内容。 我很方便，因为我需要的标记很少。</p>
+                </x-card-content>
+                <x-card-footer>
+                    <x-button >OK</x-button>
+                    <x-button raised="false">Cancel</x-button>
+                </x-card-footer>
+            </x-card>
+        </x-col>
+    </x-row>
+
+</div>
+
+</body>
+</html>

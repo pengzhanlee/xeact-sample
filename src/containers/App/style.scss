@@ -1,0 +1,13 @@
+
+.introHighlightBlock {
+  background: rgba(31, 181, 40, 1);
+}
+
+:global {
+  .introjs-fixParent {
+    .logo {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}

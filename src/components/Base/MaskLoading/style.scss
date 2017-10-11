@@ -1,0 +1,38 @@
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  //background: rgba(0, 0, 0, .1);
+  width: 100%;
+}
+
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  :global {
+    .sk-wave-wrapper {
+      padding: 0;
+    }
+    //.sk-wave .sk-rect {
+    //  background: #52c0ff;
+    //}
+  }
+}
+
+.loadingBg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  background: rgba(0, 0, 0, .7);
+  width: 80px;
+  height: 60px;
+  z-index: 1;
+  border-radius: 10px;
+}
