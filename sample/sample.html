@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Sample</title>
+
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+
+
+    <script src="/xeact/dist/env.min.js"></script>
+
+    <script src="/xeact/dist/xeact.js"></script>
+
+    <script src="/xeact-components/dist/xeact-components.js"></script>
+
+    <style>
+        .content {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 自定义标签与原生属性混用 (class) -->
+<x-root class="content">
+    <span id="change">改变打招呼内容</span>
+    <x-sample id="sample">
+        <div>Hi,</div>
+    </x-sample>
+</x-root>
+
+
+<script>
+
+    let greet = ['哈哈', '呵呵', '嚯嚯', '嘻嘻'];
+    let changeCount = -1;
+
+    document.addEventListener('DOMContentLoaded', function(){
+
+        // 调用 setter 方法
+        sample.indicator = '^_^';
+
+        // 调用 普通方法
+        console.log(`set indicator success: ${sample.getIndicator()}`);
+
+        // 监听事件
+        sample.addEventListener('greeting', function(e) {
+            // 获取事件属性
+            this.indicator = e.detail.greetTimes % 2 ? '-_-' : '^_^';
+        });
+
+        change.addEventListener('click', function() {
+            // 改变标签属性
+            sample.setAttribute('say', greet[++changeCount % greet.length]);
+        });
+
+    });
+</script>
+</body>
+
+
+
+</html>
