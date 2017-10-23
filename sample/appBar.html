@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Sample</title>
+
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+
+
+    <script src="/xeact/dist/env.min.js"></script>
+
+    <script src="/xeact/dist/xeact.js"></script>
+
+    <script src="/xeact-components/dist/xeact-components.js"></script>
+
+    <style>
+        .title{
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 自定义标签与原生属性混用 (class) -->
+<x-root >
+    <x-app-bar>
+        <x-text tag="h1" type="title" class="title">Title</x-text>
+        <x-button color="contrast" raised="false">Login</x-button>
+    </x-app-bar>
+
+</x-root>
+
+</body>
+
+
+
+</html>
