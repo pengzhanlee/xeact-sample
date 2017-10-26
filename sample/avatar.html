@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Title</title>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script
+        src="//localhost:7777/xeact/node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    <script src="//localhost:7777/xeact/node_modules/@webcomponents/webcomponentsjs/webcomponents-sd-ce.js"></script>
+
+
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+
+
+    <script src="//localhost:7777/xeact/dist/xeact.js"></script>
+
+    <script src="//localhost:7777/xeact-components/dist/xeact-components.js"></script>
+
+    <style>
+        .content {
+            padding: 8px;
+        }
+
+        .item {
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+<x-root class="content">
+
+    <div class="item">
+        <x-text tag="h2" type="title">Image Avatar</x-text>
+        <x-avatar src="https://material-ui-next.com/static/images/uxceo-128.jpg"></x-avatar>
+    </div>
+    <div class="item">
+        <x-text tag="h2" type="title">Icon Avatar</x-text>
+        <x-avatar style="background: #666; color:#fff;">
+            <x-icon name="assignment"></x-icon>
+        </x-avatar>
+    </div>
+    <div class="item">
+        <x-text tag="h2" type="title">Letter avatars</x-text>
+        <x-avatar style="background: #ff5722; color:#fff;">OP</x-avatar>
+    </div>
+
+</x-root>
+
+</body>
+</html>
