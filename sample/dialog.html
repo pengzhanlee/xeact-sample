@@ -15,6 +15,8 @@
     <script src="react-dom.development.js"></script>
 
 
+    <script src="//localhost:7777/xeact/dist/xeact.js"></script>
+
     <style>
         .content {
             padding: 8px;
@@ -29,25 +31,30 @@
 
 <x-root class="content">
 
-    <div class="item">
-        <x-text tag="h2" type="title">Image Avatar</x-text>
-        <x-avatar src="https://material-ui-next.com/static/images/uxceo-128.jpg"></x-avatar>
-    </div>
-    <div class="item">
-        <x-text tag="h2" type="title">Icon Avatar</x-text>
-        <x-avatar style="background: #666; color:#fff;">
-            <x-icon name="assignment"></x-icon>
-        </x-avatar>
-    </div>
-    <div class="item">
-        <x-text tag="h2" type="title">Letter avatars</x-text>
-        <x-avatar style="background: #ff5722; color:#fff;">OP</x-avatar>
-    </div>
+    <x-dialog id="dialog">
+        <h1 id="node">Hello</h1>
+    </x-dialog>
 
+    <x-button id="open">Open</x-button>
 </x-root>
 
-<script src="//localhost:7777/xeact/dist/xeact.js"></script>
-<script src="//localhost:7777/xeact-components/dist/xeact-components.js"></script>
 
+
+
+<script src="//localhost:7777/xeact-components/dist/xeact-components.js"></script>
+<script>
+
+    $(function() {
+        var dialog = $('#dialog')[0];
+        $('#open').click(function() {
+            dialog.open();
+        });
+
+        // 查询 dialog 内部目前使用这种方式
+        $(dialog.queryNode('#node')).click(function(){
+            console.log('You clicked me.');
+        })
+    });
+</script>
 </body>
 </html>
