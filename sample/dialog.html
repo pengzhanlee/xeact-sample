@@ -32,26 +32,34 @@
 <x-root class="content">
 
     <x-dialog id="dialog">
-        <h1 id="node">Hello</h1>
+        <x-dialog-title>Title</x-dialog-title>
+        <x-dialog-content>
+            <x-text>Dialogs inform users about a specific task and may contain critical information, require decisions,
+                or involve multiple tasks.
+            </x-text>
+            <x-text>
+                Dialogs contain text and UI controls. They retain focus until dismissed or a required action has been
+                taken. Use dialogs sparingly because they are interruptive.
+            </x-text>
+        </x-dialog-content>
     </x-dialog>
 
     <x-button id="open">Open</x-button>
+
 </x-root>
-
-
 
 
 <script src="//localhost:7777/xeact-components/dist/xeact-components.js"></script>
 <script>
 
-    $(function() {
+    $(function () {
         var dialog = $('#dialog')[0];
-        $('#open').click(function() {
+        $('#open').click(function () {
             dialog.open();
         });
 
         // 查询 dialog 内部目前使用这种方式
-        $(dialog.queryNode('#node')).click(function(){
+        $(dialog.queryNode('#node')).click(function () {
             console.log('You clicked me.');
         })
     });
