@@ -19,55 +19,20 @@
     <script src="//localhost:7777/xeact-components/dist/xeact-components.js"></script>
 
     <style>
-        .content {
-            padding: 8px;
-        }
-        .text {
-            background: #999;
-            color: #fff;
-            text-align: center;
-            padding: .5em 0;
-        }
     </style>
 </head>
 <body>
 
 <x-root class="content">
-
-    <x-row spacing="16">
-        <x-col xs="12">
-            <div class="text">xs=12</div>
-        </x-col>
-
-        <x-col xs="12" sm="6">
-            <div class="text">xs=12 sm=6</div>
-        </x-col>
-
-        <x-col xs="12" sm="6">
-            <div class="text">xs=12 sm=6</div>
-        </x-col>
-
-        <x-col xs="6" sm="3">
-            <div class="text">xs=6 sm=3</div>
-        </x-col>
-
-        <x-col xs="6" sm="3">
-            <div class="text">xs=6 sm=3</div>
-        </x-col>
-
-        <x-col xs="6" sm="3">
-            <div class="text">xs=6 sm=3</div>
-        </x-col>
-
-        <x-col xs="6" sm="3">
-            <div class="text">xs=6 sm=3</div>
-        </x-col>
-
-        <x-col xs="6">
-            <x-button color="accent" title="xss">xxx</x-button>
-        </x-col>
-    </x-row>
-
+    <x-layout>
+        <x-header>header</x-header>
+        <!--<x-layout>-->
+            <!--<x-sidebar>left sidebar</x-sidebar>-->
+            <x-content>main content</x-content>
+            <!--<x-sidebar>right sidebar</x-sidebar>-->
+        <!--</x-layout>-->
+        <x-footer>footer</x-footer>
+    </x-layout>
 </x-root>
 
 </body>

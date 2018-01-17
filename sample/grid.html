@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Title</title>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="//localhost:7777/xeact/node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    <script src="//localhost:7777/xeact/node_modules/@webcomponents/webcomponentsjs/webcomponents-sd-ce.js"></script>
+
+
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+
+
+    <script src="//localhost:7777/xeact/dist/xeact.js"></script>
+
+    <script src="//localhost:7777/xeact-components/dist/xeact-components.js"></script>
+
+    <style>
+        .content {
+            padding: 16px;
+        }
+        .text {
+            background: #999;
+            color: #fff;
+            text-align: center;
+            padding: .5em 0;
+        }
+        x-col {
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<x-root class="content">
+
+    <x-row spacing="16" gutter="16">
+        <x-col xs="24">
+            <div class="text">xs=24</div>
+        </x-col>
+
+        <x-col xs="24" sm="12">
+            <div class="text">xs=24 sm=12</div>
+        </x-col>
+
+        <x-col xs="24" sm="12">
+            <div class="text">xs=24 sm=12</div>
+        </x-col>
+
+        <x-col xs="12" sm="6">
+            <div class="text">xs=12 sm=6</div>
+        </x-col>
+
+        <x-col xs="12" sm="6">
+            <div class="text">xs=12 sm=6</div>
+        </x-col>
+
+        <x-col xs="12" sm="6">
+            <div class="text">xs=12 sm=6</div>
+        </x-col>
+
+        <x-col xs="12" sm="6">
+            <div class="text">xs=12 sm=6</div>
+        </x-col>
+
+        <x-col xs="24">
+            <x-row gutter="16">
+                <x-col span="2">1</x-col>
+                <x-col span="2">2</x-col>
+                <x-col span="2">3</x-col>
+                <x-col span="2">4</x-col>
+                <x-col span="2">5</x-col>
+                <x-col span="2">6</x-col>
+                <x-col span="12">
+                    <x-row>
+                        <x-col span="6">a</x-col>
+                        <x-col span="6">b</x-col>
+                        <x-col span="6">c</x-col>
+                        <x-col span="6">d</x-col>
+                    </x-row>
+                </x-col>
+            </x-row>
+        </x-col>
+    </x-row>
+
+</x-root>
+
+</body>
+</html>

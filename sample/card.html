@@ -49,8 +49,10 @@
                     <x-text id="b" color="accent">我是一个非常简单的卡片。 我善于包含小部分内容。 我很方便，因为我需要的标记很少。</x-text>
                 </x-card-content>
                 <x-card-footer>
-                    <x-button id="ok" color="primary">OK</x-button>
-                    <x-button id="cancel" color="accent" raised="false">Cancel</x-button>
+                    <x-button id="ok" type="primary">OK</x-button>
+                    <x-button id="cancel" style="margin-left: 10px;">
+                        <x-icon type="'close'"></x-icon> Cancel
+                    </x-button>
                 </x-card-footer>
             </x-card>
         </x-col>
@@ -61,7 +63,7 @@
 <script>
 document.querySelector('#ok').addEventListener('click', function(){
     this.innerHTML = '好的';
-    this.setAttribute('color', 'accent');
+    this.setAttribute('loading', true);
 });
 document.querySelector('#cancel').addEventListener('click', function(){
     this.setAttribute('color', 'primary');
