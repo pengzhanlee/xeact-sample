@@ -19,6 +19,9 @@
     <script src="//localhost:7777/xeact-components/dist/xeact-components.js"></script>
 
     <style>
+        x-sidebar, x-header{
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -26,11 +29,12 @@
 <x-root class="content">
     <x-layout>
         <x-header>header</x-header>
-        <!--<x-layout>-->
-            <!--<x-sidebar>left sidebar</x-sidebar>-->
+        <x-layout>
+            <x-sidebar>
+                sidebar
+            </x-sidebar>
             <x-content>main content</x-content>
-            <!--<x-sidebar>right sidebar</x-sidebar>-->
-        <!--</x-layout>-->
+        </x-layout>
         <x-footer>footer</x-footer>
     </x-layout>
 </x-root>
