@@ -6,7 +6,8 @@
     <title>Title</title>
 
     <script src="../node_modules/jquery/dist/jquery.js"></script>
-    <script src="//localhost:7777/xeact/node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    <script
+        src="//localhost:7777/xeact/node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
     <script src="//localhost:7777/xeact/node_modules/@webcomponents/webcomponentsjs/webcomponents-sd-ce.js"></script>
 
 
@@ -19,24 +20,67 @@
     <script src="//localhost:7777/xeact-components/dist/xeact-components.js"></script>
 
     <style>
-        x-sidebar, x-header{
+        .root {
+            padding: 20px;
+        }
+        .header, .footer {
+            background: #7dbcea;
             color: #fff;
+            text-align: center;
+        }
+
+        .content {
+            background: rgba(16, 142, 233, 1);
+            color: #fff;
+            min-height: 120px;
+            line-height: 120px;
+            text-align: center;
+        }
+
+        .sidebar {
+            background: #3ba0e9;
+            color: #fff;
+            line-height: 120px;
+            text-align: center;
+        }
+
+        .group {
+            margin-bottom: 40px;
         }
     </style>
 </head>
 <body>
 
-<x-root class="content">
-    <x-layout>
-        <x-header>header</x-header>
+<x-root class="root">
+
+    <x-layout class="group">
+        <x-header class="header">header</x-header>
+        <x-content class="content">main content</x-content>
+        <x-footer class="footer">footer</x-footer>
+    </x-layout>
+
+    <x-layout class="group">
+        <x-header class="header">header</x-header>
         <x-layout>
-            <x-sidebar>
+            <x-sidebar class="sidebar">
                 sidebar
             </x-sidebar>
-            <x-content>main content</x-content>
+            <x-content class="content">main content</x-content>
         </x-layout>
-        <x-footer>footer</x-footer>
+        <x-footer class="footer">footer</x-footer>
     </x-layout>
+
+    <x-layout class="group">
+        <x-header class="header">header</x-header>
+        <x-layout>
+            <x-content class="content">main content</x-content>
+            <x-sidebar class="sidebar">
+                sidebar
+            </x-sidebar>
+        </x-layout>
+        <x-footer class="footer">footer</x-footer>
+    </x-layout>
+
 </x-root>
 
 </body>
